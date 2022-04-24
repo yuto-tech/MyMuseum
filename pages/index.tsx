@@ -13,10 +13,10 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
+        <div className={styles.spotlight}></div>
         <h1 className={styles.title}>
-          Welcome to <a href='https://nextjs.org'>Next.js!</a>
+          Welcome to <a href='https://nextjs.org'>MyMuseum</a>
         </h1>
-
         <p className={styles.description}>
           Get started by editing{' '}
           <code className={styles.code}>pages/index.tsx</code>
@@ -27,7 +27,6 @@ const Home: NextPage = () => {
             <h2>Documentation &rarr;</h2>
             <p>Find in-depth information about Next.js features and API.</p>
           </a>
-
           <a href='https://nextjs.org/learn' className={styles.card}>
             <h2>Learn &rarr;</h2>
             <p>Learn about Next.js in an interactive course with quizzes!</p>
