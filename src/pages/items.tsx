@@ -1,8 +1,8 @@
 import React from 'react';
-import { Sinchan } from '../components/sinchan/index';
+import { DotsArt } from '../components/sinchan/index';
 
 const Items = () => {
-  return <Sinchan />;
+  return <DotsArt />;
 };
 
 export default Items;

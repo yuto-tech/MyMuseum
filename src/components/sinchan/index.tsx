@@ -1,28 +1,29 @@
 import styled from '@emotion/styled';
 import React from 'react';
-import { Image } from './image';
+import { shinchanImage } from './image';
 
-export const Sinchan = () => {
+export const DotsArt = () => {
   const IMAGE__COLOR = ['#fff', '#000', 'rgba(247, 226, 183, 1)', '#ffeb3b', '#03a9f4', '#e91e63', '#ff0000'];
 
-  const CreateImage = () => {
+  const CreateShinchan = () => {
     let Arr = [];
-    for (let height = 0; Image.length > height; height++) {
-      for (let width = 0; Image[height].length > width; width++) {
-        Arr.push(`${width * 10}px ${height * 10}px ${IMAGE__COLOR[Image[height][width]]}`);
+    for (let height = 0; shinchanImage.length > height; height++) {
+      for (let width = 0; shinchanImage[height].length > width; width++) {
+        Arr.push(`${width * 10}px ${height * 10}px ${IMAGE__COLOR[shinchanImage[height][width]]}`);
       }
     }
     return Arr;
   };
-  const Data = CreateImage().join(',');
-  return <Foo Data={Data} />;
+  const shinchan = CreateShinchan().join(',');
+
+  return <Img shinchan={shinchan} />;
 };
 
-const SinchanWeight = styled.div`
+const DotsSize = styled.div`
   width: 10px;
   height: 10px;
 `;
-const Foo = styled(SinchanWeight)<{ Data: string }>`
+const Img = styled(DotsSize)<{ shinchan: string }>`
   margin: 100px;
-  box-shadow: ${({ Data }) => Data};
+  box-shadow: ${({ shinchan }) => shinchan};
 `;
