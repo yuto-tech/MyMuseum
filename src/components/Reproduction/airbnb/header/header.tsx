@@ -20,8 +20,10 @@ export const Header = () => {
         <Span />
         <Location>
           <AddGuestCount>ゲスト数の追加</AddGuestCount>
+          <SearchIcon>Q</SearchIcon>
         </Location>
       </SearchBar>
+      <Controller aria-label='プロフィール'></Controller>
     </Box>
   );
 };
@@ -48,8 +50,6 @@ const Box = styled.div`
 const Anchor = styled.a`
   text-decoration: none;
   background-color: #fff;
-  vertical-align: middle;
-  height: 80px;
   cursor: pointer;
   display: block;
   &:focus {
@@ -69,6 +69,8 @@ const SVG = styled.div`
   width: 102px;
   height: 30px;
   display: block;
+  margin: auto 0;
+  background-color: red;
 `;
 
 const SearchBar = styled.div`
@@ -76,8 +78,9 @@ const SearchBar = styled.div`
   min-width: 348px;
   background-color: #fff;
   flex: 0 1 auto;
-  padding: 0 24px;
+  margin: 0 24px;
   text-align: center;
+  align-items: center;
   border: 1px solid #fff;
   border-radius: 40px;
   height: 48px;
@@ -95,8 +98,9 @@ const Span = styled.span`
 `;
 
 const Location = styled.button`
+  display: flex;
   background-color: transparent;
-  margin: 0 auto;
+  align-items: center;
   cursor: pointer;
   padding: 0;
   text-align: inherit;
@@ -137,8 +141,9 @@ const NoWeekSpecified = styled.div`
 `;
 
 const AddGuestCount = styled.div`
+  color: #717171;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 400;
   line-height: 18px;
   text-overflow: ellipsis;
   white-space: nowrap; //この使い方は分からない
@@ -147,4 +152,25 @@ const AddGuestCount = styled.div`
   overflow: hidden;
   padding-inline-start: 16px;
   padding-inline-end: 16px;
+`;
+
+const SearchIcon = styled.div`
+  background-color: #ff385c;
+  margin: 7px 7px 7px 0;
+  border-radius: 50%;
+  padding: 10px;
+  height: 32px;
+  width: 32px;
+  color: #fff;
+`;
+
+const Controller = styled.div`
+  display: flex;
+  flex: auto;
+  margin-right: 8px;
+  justify-content: flex-end;
+`;
+
+const ControllerAnchor = styled.div`
+  background-color: transparent;
 `;
